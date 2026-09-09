@@ -7,7 +7,7 @@
 
 <!-- PWA Manifest & Icons -->
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0d141d">
+<meta name="theme-color" content="#1F2E4A">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="ME-2 Schedule">
@@ -20,46 +20,48 @@
 
 <style>
 :root {
-  --bg: #0d141d;
-  --surface: #141f2d;
-  --surface-alt: #1b293b;
-  --border: #23344a;
-  --border-dark: #304764;
-  --text-main: #edf5f9;
-  --text-muted: #859bb3;
-  --text-subtle: #576f87;
+  /* Dark Mode (Legal Eminence Palette) */
+  --bg: #1F2E4A;
+  --surface: #19263c;
+  --surface-alt: #343A40;
+  --border: #2c3f61;
+  --border-dark: #3b537d;
+  --text-main: #F8F9FA;
+  --text-muted: #CED4DA;
+  --text-subtle: #8a99a8;
   
-  --accent: #2ba4cc;
-  --accent-light: #6ec4e0;
-  --accent-glow: rgba(43, 164, 204, 0.2);
-  --bone: #eae3d5;
-  --bone-glow: rgba(234, 227, 213, 0.15);
+  --accent: #5e8bc4;
+  --accent-light: #CED4DA;
+  --accent-glow: rgba(206, 212, 218, 0.18);
+  --bone: #F8F9FA;
+  --bone-glow: rgba(248, 249, 250, 0.12);
 
   --quiz-color: #f97316;
   --quiz-glow: rgba(249, 115, 22, 0.25);
 
-  /* ME2 Course Palette */
-  --c-mdp251: #f59e0b;
-  --c-mdp221: #06b6d4;
-  --c-mdp241: #10b981;
-  --c-mep211: #ef4444;
-  --c-mep221: #3b82f6;
+  /* Course Color Accents */
+  --c-mdp251: #e09f67;
+  --c-mdp221: #854F6C;
+  --c-mdp241: #522B5B;
+  --c-mep211: #b35368;
+  --c-mep221: #4a6fa5;
 }
 
 [data-theme="light"] {
-  --bg: #eef5f8;
+  /* Light Mode (Legal Eminence Inverted) */
+  --bg: #F8F9FA;
   --surface: #ffffff;
-  --surface-alt: #deebf2;
-  --border: #c2d7e3;
-  --border-dark: #a5c3d3;
-  --text-main: #0c1926;
-  --text-muted: #506a7e;
-  --text-subtle: #7997ab;
-  --accent: #197a9c;
-  --accent-light: #2ba4cc;
-  --accent-glow: rgba(25, 122, 156, 0.14);
-  --bone: #23344a;
-  --bone-glow: rgba(35, 52, 74, 0.1);
+  --surface-alt: #e9ecef;
+  --border: #CED4DA;
+  --border-dark: #adb5bd;
+  --text-main: #1F2E4A;
+  --text-muted: #343A40;
+  --text-subtle: #6c757d;
+  --accent: #1F2E4A;
+  --accent-light: #343A40;
+  --accent-glow: rgba(31, 46, 74, 0.12);
+  --bone: #1F2E4A;
+  --bone-glow: rgba(31, 46, 74, 0.08);
   --quiz-color: #ea580c;
   --quiz-glow: rgba(234, 88, 12, 0.15);
 }
@@ -482,7 +484,7 @@ body {
   border-radius: 4px;
 }
 .badge-type { background: var(--surface-alt); color: var(--text-muted); }
-.badge-all { background: rgba(43, 164, 204, 0.18); color: var(--accent-light); }
+.badge-all { background: rgba(206, 212, 218, 0.18); color: var(--accent-light); }
 .badge-live { background: rgba(16, 185, 129, 0.15); color: #10b981; }
 .badge-task { background: var(--quiz-color); color: #ffffff; cursor: pointer; }
 
@@ -629,7 +631,7 @@ body {
   text-transform: uppercase;
 }
 .grid-card .type.all {
-  background: rgba(43, 164, 204, 0.18);
+  background: rgba(206, 212, 218, 0.18);
   color: var(--accent-light);
 }
 .grid-card .type.quiz-tag {
@@ -679,7 +681,7 @@ body {
   transform: translateX(-50%);
   width: calc(100% - 24px);
   max-width: 500px;
-  background: rgba(20, 31, 45, 0.92);
+  background: rgba(25, 38, 60, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-dark);
@@ -749,7 +751,7 @@ body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(13, 20, 29, 0.75);
+  background: rgba(31, 46, 74, 0.75);
   backdrop-filter: blur(6px);
   z-index: 1000;
   display: flex;
@@ -821,7 +823,7 @@ body {
   margin-bottom: 4px;
 }
 .drive-main-link-btn:hover {
-  background: rgba(43, 164, 204, 0.3);
+  background: rgba(206, 212, 218, 0.25);
 }
 .course-accordion {
   background: var(--surface-alt);
@@ -968,12 +970,12 @@ body {
   }
 
   .masthead {
-    border-bottom: 2px solid #0f172a !important;
+    border-bottom: 2px solid #1F2E4A !important;
     padding-bottom: 8px !important;
     margin-bottom: 12px !important;
   }
-  .dept-title { font-size: 19px !important; color: #0f172a !important; }
-  .uni-title, .faculty-title, .date-academic-strip { color: #334155 !important; }
+  .dept-title { font-size: 19px !important; color: #1F2E4A !important; }
+  .uni-title, .faculty-title, .date-academic-strip { color: #343A40 !important; }
 
   body.print-day-mode .matrix-wrapper,
   body.print-day-mode .legend {
@@ -989,7 +991,7 @@ body {
     page-break-inside: avoid !important;
   }
   body.print-day-mode .timeline-card {
-    border: 1px solid #cbd5e1 !important;
+    border: 1px solid #CED4DA !important;
     box-shadow: none !important;
     background: #ffffff !important;
     border-left: 4px solid var(--c) !important;
@@ -1001,7 +1003,7 @@ body {
   body.print-week-mode .matrix-wrapper {
     display: block !important;
     box-shadow: none !important;
-    border: 1.5px solid #0f172a !important;
+    border: 1.5px solid #1F2E4A !important;
     border-radius: 4px !important;
     overflow: visible !important;
     background: #ffffff !important;
@@ -1018,35 +1020,35 @@ body {
   }
   body.print-week-mode .matrix-head {
     background: #f1f5f9 !important;
-    border-bottom: 1.5px solid #0f172a !important;
-    border-right: 1px solid #cbd5e1 !important;
-    color: #0f172a !important;
+    border-bottom: 1.5px solid #1F2E4A !important;
+    border-right: 1px solid #CED4DA !important;
+    color: #1F2E4A !important;
     font-size: 11px !important;
     font-weight: 800 !important;
     padding: 4px 6px !important;
   }
   body.print-week-mode .matrix-head.is-today {
     background: #f1f5f9 !important;
-    color: #0f172a !important;
+    color: #1F2E4A !important;
   }
   body.print-week-mode .matrix-head .today-pill,
   body.print-week-mode .matrix-head .quiz-pill { display: none !important; }
   body.print-week-mode .matrix-time {
     background: #f8fafc !important;
-    border-bottom: 1px solid #cbd5e1 !important;
-    border-right: 1.5px solid #0f172a !important;
-    color: #334155 !important;
+    border-bottom: 1px solid #CED4DA !important;
+    border-right: 1.5px solid #1F2E4A !important;
+    color: #343A40 !important;
     font-size: 10px !important;
     padding: 2px !important;
   }
   body.print-week-mode .matrix-cell {
-    border-bottom: 1px solid #cbd5e1 !important;
-    border-right: 1px solid #cbd5e1 !important;
+    border-bottom: 1px solid #CED4DA !important;
+    border-right: 1px solid #CED4DA !important;
     padding: 3px !important;
   }
   body.print-week-mode .grid-card {
     box-shadow: none !important;
-    border: 1px solid #94a3b8 !important;
+    border: 1px solid #adb5bd !important;
     border-left: 3.5px solid var(--c) !important;
     border-radius: 4px !important;
     padding: 4px 6px !important;
@@ -1055,19 +1057,19 @@ body {
     opacity: 1 !important;
     filter: none !important;
   }
-  body.print-week-mode .grid-card .code { font-size: 10px !important; color: #0f172a !important; }
-  body.print-week-mode .grid-card .type { font-size: 8px !important; background: #f1f5f9 !important; color: #334155 !important; padding: 0 3px !important; }
-  body.print-week-mode .grid-card .title { font-size: 9px !important; color: #334155 !important; margin-top: 1px !important; line-height: 1.2 !important; }
-  body.print-week-mode .grid-card .footer { font-size: 8.5px !important; padding-top: 2px !important; border-top: 1px dashed #cbd5e1 !important; color: #475569 !important; }
-  body.print-week-mode .grid-card .room-badge { background: #f1f5f9 !important; border: 1px solid #cbd5e1 !important; padding: 0 4px !important; font-size: 8px !important; color: #0f172a !important; }
+  body.print-week-mode .grid-card .code { font-size: 10px !important; color: #1F2E4A !important; }
+  body.print-week-mode .grid-card .type { font-size: 8px !important; background: #f1f5f9 !important; color: #343A40 !important; padding: 0 3px !important; }
+  body.print-week-mode .grid-card .title { font-size: 9px !important; color: #343A40 !important; margin-top: 1px !important; line-height: 1.2 !important; }
+  body.print-week-mode .grid-card .footer { font-size: 8.5px !important; padding-top: 2px !important; border-top: 1px dashed #CED4DA !important; color: #495057 !important; }
+  body.print-week-mode .grid-card .room-badge { background: #f1f5f9 !important; border: 1px solid #CED4DA !important; padding: 0 4px !important; font-size: 8px !important; color: #1F2E4A !important; }
   body.print-week-mode .legend {
     margin-top: 10px !important;
     padding: 6px 10px !important;
-    border: 1px solid #cbd5e1 !important;
+    border: 1px solid #CED4DA !important;
     gap: 6px 14px !important;
     page-break-inside: avoid !important;
   }
-  body.print-week-mode .legend-item { font-size: 9px !important; color: #334155 !important; }
+  body.print-week-mode .legend-item { font-size: 9px !important; color: #343A40 !important; }
 }
 </style>
 </head>
