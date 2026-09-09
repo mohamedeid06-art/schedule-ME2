@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CUFE · Mechanical Engineering — 2nd Year (ME2)</title>
+<title>CUFE · Mechanical Engineering — Batch 29</title>
 
 <!-- PWA Manifest & Icons -->
 <link rel="manifest" href="manifest.json">
@@ -38,7 +38,7 @@
   --quiz-color: #f97316;
   --quiz-glow: rgba(249, 115, 22, 0.25);
 
-  /* Course Color Accents */
+  /* ME2 Course Palette */
   --c-mdp251: #f59e0b;
   --c-mdp221: #06b6d4;
   --c-mdp241: #10b981;
@@ -1082,7 +1082,7 @@ body {
       <div class="faculty-title">Department of Mechanical Engineering</div>
       <h1 class="dept-title">
         Schedule
-        <span class="batch-tag">ME-2</span>
+        <span class="batch-tag">BATCH 29</span>
       </h1>
       
       <div class="date-academic-strip">
@@ -1276,9 +1276,9 @@ const NOTIFICATIONS = [
   {
     id: "ann-01",
     date: "19 Sep 2026",
-    tag: "ME-2",
+    tag: "Batch 29",
     isUrgent: false,
-    title: "Welcome to 2nd Year Mechanical Engineering",
+    title: "Welcome to 2nd Year Mechanical Engineering (Batch 29)",
     body: "Fall Semester timetable is now active. Lectures and sessions start officially on Saturday, 19 September 2026."
   }
 ];
@@ -2017,6 +2017,15 @@ window.addEventListener('appinstalled', () => {
   if (topInstallBtn) topInstallBtn.style.display = 'none';
   deferredPrompt = null;
 });
+
+// PWA Service Worker Registration
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then((reg) => console.log('SW Registered!', reg))
+      .catch((err) => console.error('SW Registration Failed:', err));
+  });
+}
 
 // Init
 initDeviceMode();
