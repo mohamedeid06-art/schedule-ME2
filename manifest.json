@@ -1,12 +1,12 @@
 {
-  "name": "CUFE Mechanical 1 Schedule",
+  "name": "CUFE Mechanical 2 Schedule",
   "short_name": "ME-2 Schedule",
-  "description": "Cairo University Faculty of Engineering - Mechanical Engineering 1 Timetable",
+  "description": "Cairo University Faculty of Engineering - Mechanical Engineering 2 Timetable",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#090d16",
-  "theme_color": "#2563eb",
+  "background_color": "#0d141d",
+  "theme_color": "#0d141d",
   "orientation": "portrait",
   "icons": [
     {
